@@ -24,7 +24,7 @@ public class FacturaService {
     }
 
     public List<FacturaResponse> findAllFacturasResponse() {
-        return (List<FacturaResponse>) facturaRepository.findProjectedNativeQuery();
+        return facturaRepository.findProjectedNativeQuery();
     }
 
 }
