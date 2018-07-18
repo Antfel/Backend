@@ -2,6 +2,7 @@ package pe.transportesscaramutti.Backend.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import pe.transportesscaramutti.Backend.dtoResponse.FacturaResponse;
 import pe.transportesscaramutti.Backend.model.Factura;
 import pe.transportesscaramutti.Backend.repository.FacturaRepository;
 
@@ -20,6 +21,10 @@ public class FacturaService {
 
     public List<Factura> findAllFacturas() {
         return (List<Factura>) facturaRepository.findAll();
+    }
+
+    public List<FacturaResponse> findAllFacturasResponse() {
+        return (List<FacturaResponse>) facturaRepository.findProjectedNativeQuery();
     }
 
 }

@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import pe.transportesscaramutti.Backend.dtoResponse.FacturaResponse;
 import pe.transportesscaramutti.Backend.model.Factura;
 import pe.transportesscaramutti.Backend.service.FacturaService;
 
@@ -27,6 +28,15 @@ public class FacturaController {
             return new ResponseEntity<List<Factura>>(HttpStatus.NO_CONTENT);
         }
         return new ResponseEntity<List<Factura>>(facturas, HttpStatus.OK);
+    }
+
+    @GetMapping(value = "factura/response/all")
+    public ResponseEntity<List<FacturaResponse>> listAllFacturasResponse() {
+        List<FacturaResponse> facturas = facturaService.findAllFacturasResponse();
+        if (facturas.isEmpty()) {
+            return new ResponseEntity<List<FacturaResponse>>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<List<FacturaResponse>>(facturas, HttpStatus.OK);
     }
 
 }
