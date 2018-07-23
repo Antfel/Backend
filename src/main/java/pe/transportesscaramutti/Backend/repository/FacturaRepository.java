@@ -2,7 +2,7 @@ package pe.transportesscaramutti.Backend.repository;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
-import pe.transportesscaramutti.Backend.dtoResponse.FacturaResponse;
+import pe.transportesscaramutti.Backend.dto.FacturaResponse;
 import pe.transportesscaramutti.Backend.model.Factura;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package pe.transportesscaramutti.Backend.dtoResponse;
+package pe.transportesscaramutti.Backend.dto;
 
 public interface FacturaResponse {
     String getCodigo();

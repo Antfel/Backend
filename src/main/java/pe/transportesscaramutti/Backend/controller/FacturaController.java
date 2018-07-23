@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import pe.transportesscaramutti.Backend.dtoResponse.FacturaResponse;
+import pe.transportesscaramutti.Backend.dto.FacturaResponse;
 import pe.transportesscaramutti.Backend.model.Factura;
 import pe.transportesscaramutti.Backend.service.FacturaService;
 
